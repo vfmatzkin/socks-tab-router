@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>SOCKS Tab Router</h1>
+      <span id="status-dot" class="dot dot-disconnected"></span>
+      <span id="status-text" class="status-text">Disconnected</span>
+    </div>
+
+    <div id="connect-section" class="section hidden">
+      <button id="btn-connect" class="btn btn-connect">Connect</button>
+    </div>
+
+    <div id="connected-section" class="section hidden">
+      <div id="api-controls" class="controls hidden">
+        <button id="btn-disconnect" class="btn btn-disconnect">Disconnect</button>
+      </div>
+
+      <div class="controls">
+        <button id="btn-toggle-proxy" class="btn btn-secondary">Enable Proxy</button>
+      </div>
+
+      <div id="proxy-controls" class="section">
+        <div class="mode-switch">
+          <label class="mode-label">
+            <input type="radio" name="mode" value="all" checked>
+            <span>All traffic</span>
+          </label>
+          <label class="mode-label">
+            <input type="radio" name="mode" value="pertab">
+            <span>Per-tab</span>
+          </label>
+        </div>
+
+        <div id="domains-section" class="hidden">
+          <div class="domains-header">Routed domains</div>
+          <ul id="domains-list" class="domains-list"></ul>
+          <div id="domains-empty" class="domains-empty">
+            No domains. Right-click a page to add.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="auth-msg" class="auth-msg hidden">
+      Waiting for authentication...
+    </div>
+
+    <div class="footer">
+      <a id="open-settings" href="#" class="settings-link">
+        <svg class="settings-icon" viewBox="0 0 20 20" fill="currentColor" width="12" height="12">
+          <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.062 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+        </svg>
+        Settings
+      </a>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 300px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  background: #1a1a2e;
+  color: #e0e0e0;
+}
+
+.container {
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot-disconnected {
+  background: #6b7280;
+}
+
+.dot-connected {
+  background: #22c55e;
+}
+
+.dot-authenticating {
+  background: #f59e0b;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.status-text {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.section {
+  margin-bottom: 12px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.btn {
+  width: 100%;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-connect {
+  background: #22c55e;
+  color: #000;
+}
+
+.btn-connect:hover {
+  background: #16a34a;
+}
+
+.btn-disconnect {
+  background: #ef4444;
+  color: #fff;
+  flex: 1;
+}
+
+.btn-disconnect:hover {
+  background: #dc2626;
+}
+
+.btn-secondary {
+  background: #374151;
+  color: #e0e0e0;
+  flex: 1;
+}
+
+.btn-secondary:hover {
+  background: #4b5563;
+}
+
+.btn-secondary.active {
+  background: #22c55e;
+  color: #000;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.mode-switch {
+  display: flex;
+  gap: 4px;
+  background: #0f0f23;
+  border-radius: 6px;
+  padding: 3px;
+  margin-bottom: 12px;
+}
+
+.mode-label {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mode-label input {
+  display: none;
+}
+
+.mode-label span {
+  display: block;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  transition: background 0.15s;
+  color: #9ca3af;
+}
+
+.mode-label input:checked + span {
+  background: #374151;
+  color: #ffffff;
+}
+
+.domains-header {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.domains-list {
+  list-style: none;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.domains-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 8px;
+  background: #0f0f23;
+  border-radius: 4px;
+  margin-bottom: 3px;
+  font-size: 12px;
+  font-family: monospace;
+}
+
+.domains-list li .remove-btn {
+  background: none;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+.domains-list li .remove-btn:hover {
+  color: #f87171;
+}
+
+.domains-empty {
+  font-size: 11px;
+  color: #6b7280;
+  text-align: center;
+  padding: 12px;
+}
+
+.auth-msg {
+  font-size: 12px;
+  color: #f59e0b;
+  text-align: center;
+  padding: 8px;
+  animation: pulse 1.5s infinite;
+}
+
+.footer {
+  border-top: 1px solid #2d2d4a;
+  margin-top: 4px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.settings-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 11px;
+  transition: color 0.15s;
+}
+
+.settings-link:hover {
+  color: #9ca3af;
+}
+
+.settings-icon {
+  flex-shrink: 0;
+}

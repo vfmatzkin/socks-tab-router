@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <h1>SOCKS Tab Router Settings</h1>
+
+    <div class="field">
+      <label for="proxy-host">SOCKS Proxy Host</label>
+      <input type="text" id="proxy-host" placeholder="localhost">
+    </div>
+
+    <div class="field">
+      <label for="proxy-port">SOCKS Proxy Port</label>
+      <input type="number" id="proxy-port" placeholder="1080" min="1" max="65535">
+    </div>
+
+    <div class="field">
+      <label for="api-url">Control API URL <span class="optional">(optional)</span></label>
+      <input type="text" id="api-url" placeholder="http://localhost:1081">
+      <div class="hint">
+        Base URL for connect/disconnect API. Leave empty for proxy-only mode (no VPN control).
+      </div>
+    </div>
+
+    <button id="btn-save" class="btn btn-save">Save</button>
+    <div id="save-status" class="save-status hidden">Settings saved.</div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
