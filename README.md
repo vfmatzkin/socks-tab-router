@@ -76,13 +76,9 @@ ssh -D 1080 -N user@server
 
 # microsocks (lightweight, ~50KB)
 microsocks -p 1080
-
-# Docker with OpenVPN + SOCKS5
-docker run -d --cap-add=NET_ADMIN --device=/dev/net/tun \
-  -v ./config.ovpn:/vpn/config.ovpn:ro \
-  -p 1080:1080 \
-  curve25519xsalsa20poly1305/openvpn-socks5
 ```
+
+You could also run a SOCKS5 proxy inside a Docker container that handles networking (VPN, Tor, custom routing) and expose port 1080 to the host. That way only the browser traffic you choose goes through the container's network, while the rest of your system stays clean. Add a small HTTP API to the container for connect/disconnect and set the Control API URL in the extension settings.
 
 ## License
 
