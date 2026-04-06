@@ -2,6 +2,10 @@
 
 Chrome extension that routes browser traffic through a SOCKS5 proxy. Route all traffic or pick individual tabs via right-click context menu.
 
+<img width="303" height="274" alt="image" src="https://github.com/user-attachments/assets/573bb01a-44c1-4d0f-b686-cc3824eac1b5" />
+<img width="433" height="69" alt="image" src="https://github.com/user-attachments/assets/89e2fea6-ff7e-4cc1-9d51-3ecf5b106874" />
+
+
 ## Features
 
 - **All traffic mode** — route everything through the proxy
